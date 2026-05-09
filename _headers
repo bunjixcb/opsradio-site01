@@ -1,0 +1,11 @@
+/opsradio.apk
+  Content-Type: application/vnd.android.package-archive
+  Content-Disposition: attachment; filename="opsradio.apk"
+  Cache-Control: public, max-age=300, must-revalidate
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
