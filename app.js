@@ -5,6 +5,9 @@
   var APK_VERSION = 'v1.0';
   var APK_SIZE = '20.6 MB';
 
+  // TODO: replace with the real public TestFlight link from App Store Connect
+  var TESTFLIGHT_URL = 'https://testflight.apple.com/join/REPLACE_ME';
+
   var ua = navigator.userAgent || '';
   var isAndroid = /android/i.test(ua);
   var isIOS = /iphone|ipad|ipod/i.test(ua) ||
@@ -29,10 +32,20 @@
     } else if (isIOS) {
       cta.dataset.state = 'ios';
       cta.innerHTML =
-        '<div class="cta-message">' +
-          '<p><strong>OPS Radio is Android-only right now.</strong></p>' +
-          '<p>iOS support isn’t available yet.</p>' +
-        '</div>';
+        '<a class="btn btn-primary btn-download" href="' + TESTFLIGHT_URL +
+        '" target="_blank" rel="noopener">' + downloadIconSVG() +
+        'Join TestFlight Beta</a>' +
+        '<p class="cta-message" style="margin-top:12px">' +
+          'OPS Radio for iOS is in public beta via Apple TestFlight.' +
+        '</p>';
+
+      var heading = document.querySelector('.apk-card-title h2');
+      if (heading) heading.textContent = 'OPS Radio for iOS';
+      var meta = document.querySelector('.apk-card-title .meta-list');
+      if (meta) meta.innerHTML =
+        '<li>Version 1.0</li><li>iOS 16+</li><li>TestFlight</li>';
+      var badge = document.querySelector('.apk-badge-icon use');
+      if (badge) badge.setAttribute('href', '#i-apple');
     } else {
       cta.dataset.state = 'desktop';
       cta.innerHTML =
