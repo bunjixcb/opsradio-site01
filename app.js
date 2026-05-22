@@ -2,6 +2,7 @@
   'use strict';
 
   var APK_HREF = '/opsradio.apk';
+  var AMAZON_HREF = 'https://www.amazon.co.uk/dp/B0H2C1WWG3';
   var APK_VERSION = 'v1.0';
   var APK_SIZE = '20.6 MB';
 
@@ -14,18 +15,28 @@
   var cta = document.getElementById('cta');
   var qrCard = document.getElementById('qr-card');
 
-  function downloadIconSVG() {
+  function iconSVG(id) {
     return '<svg class="btn-icon" aria-hidden="true">' +
-           '<use href="#i-download"></use></svg>';
+           '<use href="#' + id + '"></use></svg>';
+  }
+
+  function apkButton() {
+    return '<a class="btn btn-primary btn-download" href="' + APK_HREF +
+           '" download="opsradio.apk">' + iconSVG('i-download') +
+           'Download APK</a>';
+  }
+
+  function amazonButton() {
+    return '<a class="btn btn-amazon btn-download" href="' + AMAZON_HREF +
+           '" target="_blank" rel="noopener">' + iconSVG('i-amazon') +
+           'Get it on Amazon Appstore</a>';
   }
 
   if (cta) {
     if (isAndroid) {
       cta.dataset.state = 'android';
       cta.innerHTML =
-        '<a class="btn btn-primary btn-download" href="' + APK_HREF +
-        '" download="opsradio.apk">' + downloadIconSVG() +
-        'Download APK</a>';
+        '<div class="cta-stack">' + apkButton() + amazonButton() + '</div>';
     } else if (isIOS) {
       cta.dataset.state = 'ios';
       cta.innerHTML =
@@ -36,9 +47,7 @@
     } else {
       cta.dataset.state = 'desktop';
       cta.innerHTML =
-        '<a class="btn btn-primary btn-download" href="' + APK_HREF +
-        '" download="opsradio.apk">' + downloadIconSVG() +
-        'Download APK</a>' +
+        '<div class="cta-stack">' + apkButton() + amazonButton() + '</div>' +
         '<p class="cta-message" style="margin-top:12px">' +
           'Or scan the QR code to install on your phone.' +
         '</p>';

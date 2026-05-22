@@ -248,6 +248,33 @@ main {
   border-radius: 20px;
 }
 
+/* Amazon Appstore — dark badge style, on-brand navy with orange smile icon */
+.btn-amazon {
+  background: linear-gradient(180deg, #1B2748 0%, var(--ops-navy) 100%);
+  color: #fff;
+  box-shadow:
+    0 12px 28px rgba(11, 21, 56, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+.btn-amazon:hover {
+  box-shadow:
+    0 14px 32px rgba(11, 21, 56, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
+  transform: translateY(-1px);
+}
+.btn-amazon .btn-icon {
+  width: 22px;
+  height: 22px;
+  color: #FF9900;
+}
+
+/* Stacked download options (APK + Amazon Appstore) */
+.cta-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 /* ============================================================
    ZONE 2 — APK download card (+ QR card on desktop)
    ============================================================ */

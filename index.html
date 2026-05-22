@@ -51,6 +51,7 @@
       <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M12 3l8 3v6c0 4.5-3.5 8-8 9-4.5-1-8-4.5-8-9V6l8-3z"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/></symbol>
       <symbol id="i-install" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="12" height="18" rx="2"/><path d="M9 14l3 3 3-3M12 7v10"/></g></symbol>
       <symbol id="i-play" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 8.5v7l6-3.5-6-3.5z" fill="currentColor"/></symbol>
+      <symbol id="i-amazon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M4 13c4.5 3.8 11.5 4 16 .5"/><path fill="currentColor" d="M18.3 10.4l3.3-.5-.7 3.2z"/></symbol>
     </defs>
   </svg>
 
@@ -91,14 +92,20 @@
 
         <div class="apk-card-cta" id="cta" data-state="loading">
           <noscript>
-            <a class="btn btn-primary btn-download" href="/opsradio.apk" download="opsradio.apk">
-              <svg class="btn-icon"><use href="#i-download"/></svg>
-              Download APK
-            </a>
+            <div class="cta-stack">
+              <a class="btn btn-primary btn-download" href="/opsradio.apk" download="opsradio.apk">
+                <svg class="btn-icon"><use href="#i-download"/></svg>
+                Download APK
+              </a>
+              <a class="btn btn-amazon btn-download" href="https://www.amazon.co.uk/dp/B0H2C1WWG3" target="_blank" rel="noopener">
+                <svg class="btn-icon"><use href="#i-amazon"/></svg>
+                Get it on Amazon Appstore
+              </a>
+            </div>
           </noscript>
         </div>
 
-        <p class="apk-card-trust">Secure direct download from Oxford Private Studios Ltd</p>
+        <p class="apk-card-trust">Direct APK signed by Oxford Private Studios Ltd · also on the Amazon Appstore</p>
       </article>
 
       <aside class="qr-card" id="qr-card" hidden>
