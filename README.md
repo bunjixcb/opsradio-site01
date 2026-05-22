@@ -46,6 +46,11 @@ python -c "import qrcode; from qrcode.constants import ERROR_CORRECT_M; qr = qrc
 
 (Requires `pip install --user qrcode[pil]` once.)
 
+After regenerating, bump the `?v=` query on the `qr.png` reference in
+`index.html` (e.g. `/qr.png?v=2` → `?v=3`). Cloudflare edge-caches the
+image by path, so without a new query string visitors keep seeing the
+old QR even after the deploy.
+
 ## Local preview
 
 Open `index.html` in a browser. For a real localhost (so the JS download
