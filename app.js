@@ -3,6 +3,7 @@
 
   var APK_HREF = '/opsradio.apk';
   var AMAZON_HREF = 'https://www.amazon.co.uk/dp/B0H2C1WWG3';
+  var MS_HREF = 'https://apps.microsoft.com/detail/9p791g2vfx64';
   var APK_VERSION = 'v1.0';
   var APK_SIZE = '20.6 MB';
 
@@ -32,22 +33,34 @@
            'Get it on Amazon Appstore</a>';
   }
 
+  function microsoftButton() {
+    return '<div class="cta-store">' +
+      '<a class="btn btn-microsoft btn-download" href="' + MS_HREF +
+      '" target="_blank" rel="noopener">' + iconSVG('i-microsoft') +
+      'Get it on Microsoft Store</a>' +
+      '<p class="cta-cap">Xbox · PC · Mobile · Laptop · HoloLens</p>' +
+    '</div>';
+  }
+
+  function storeStack() {
+    return '<div class="cta-stack">' +
+      apkButton() + amazonButton() + microsoftButton() + '</div>';
+  }
+
   if (cta) {
     if (isAndroid) {
       cta.dataset.state = 'android';
-      cta.innerHTML =
-        '<div class="cta-stack">' + apkButton() + amazonButton() + '</div>';
+      cta.innerHTML = storeStack();
     } else if (isIOS) {
       cta.dataset.state = 'ios';
       cta.innerHTML =
         '<div class="cta-message">' +
-          '<p><strong>OPS Radio is Android-only right now.</strong></p>' +
-          '<p>iOS support isn’t available yet.</p>' +
+          '<p><strong>OPS Radio isn’t on iOS yet.</strong></p>' +
+          '<p>Today it’s available on Android, Windows and Xbox.</p>' +
         '</div>';
     } else {
       cta.dataset.state = 'desktop';
-      cta.innerHTML =
-        '<div class="cta-stack">' + apkButton() + amazonButton() + '</div>' +
+      cta.innerHTML = storeStack() +
         '<p class="cta-message" style="margin-top:12px">' +
           'Or scan the QR code to install on your phone.' +
         '</p>';

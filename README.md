@@ -20,10 +20,12 @@ opsradio-site/
 The page renders five visual zones (matches the brand brief):
 
 1. **Hero** — logo + tagline + primary "Download APK" + secondary "How it works"
-2. **APK download card** — premium glass card with Android badge, version pill,
-   trust line, and a shine sweep every 8 s. Offers two download targets: the
-   direct signed APK and the [Amazon Appstore](https://www.amazon.co.uk/dp/B0H2C1WWG3)
-   listing (`AMAZON_HREF` in `app.js`). On desktop, a QR card sits beside it.
+2. **Download card** — premium glass card with a devices badge, version pill,
+   trust line, and a shine sweep every 8 s. Offers three download targets: the
+   direct signed APK, the [Amazon Appstore](https://www.amazon.co.uk/dp/B0H2C1WWG3)
+   listing (`AMAZON_HREF`), and the [Microsoft Store](https://apps.microsoft.com/detail/9p791g2vfx64)
+   listing (`MS_HREF`, with a Xbox/PC/Mobile/Laptop/HoloLens caption) — both
+   constants in `app.js`. On desktop, a QR card sits beside it.
 3. **Features** — 6-card grid (Live Radio, Floating Player, Artist Discovery,
    Playlist Sync, Low Data Playback, Future Ready)
 4. **Install steps** — 4 numbered cards with icons
