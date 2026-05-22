@@ -19,7 +19,7 @@ opsradio-site/
 
 The page renders five visual zones (matches the brand brief):
 
-1. **Hero** — logo + tagline + primary "Download APK" + secondary "How it works"
+1. **Hero** — logo + tagline + platform line + primary "Get the app" + secondary "How to install"
 2. **Download card** — premium glass card with a devices badge, version pill,
    trust line, and a shine sweep every 8 s. Offers three download targets: the
    direct signed APK, the [Amazon Appstore](https://www.amazon.co.uk/dp/B0H2C1WWG3)
@@ -28,9 +28,10 @@ The page renders five visual zones (matches the brand brief):
    constants in `app.js`. On desktop, a QR card sits beside it.
 3. **Features** — 6-card grid (Live Radio, Floating Player, Artist Discovery,
    Playlist Sync, Low Data Playback, Future Ready)
-4. **Install steps** — 4 numbered cards with icons
+4. **Install options** — 3 channel cards (Microsoft Store, Amazon Appstore,
+   Direct APK), each with its own install path
 5. **Troubleshooting** — 5-item native `<details>` accordion (one-open at a time
-   via app.js)
+   via app.js), scoped to the direct-APK sideload route
 
 A faint soundwave mesh drifts behind everything (CSS-only, ~6% opacity) and
 respects `prefers-reduced-motion`.
@@ -40,7 +41,7 @@ respects `prefers-reduced-motion`.
 If the URL ever changes:
 
 ```powershell
-python -c "import qrcode; from qrcode.constants import ERROR_CORRECT_M; qr = qrcode.QRCode(error_correction=ERROR_CORRECT_M, box_size=10, border=3); qr.add_data('https://opsradio.app/'); qr.make(fit=True); qr.make_image(fill_color='#0B1538', back_color='#FFFFFF').convert('RGB').save('qr.png', optimize=True)"
+python -c "import qrcode; from qrcode.constants import ERROR_CORRECT_M; qr = qrcode.QRCode(error_correction=ERROR_CORRECT_M, box_size=10, border=3); qr.add_data('https://download.opsradio.app/'); qr.make(fit=True); qr.make_image(fill_color='#0B1538', back_color='#FFFFFF').convert('RGB').save('qr.png', optimize=True)"
 ```
 
 (Requires `pip install --user qrcode[pil]` once.)

@@ -22,15 +22,21 @@
   }
 
   function apkButton() {
-    return '<a class="btn btn-primary btn-download" href="' + APK_HREF +
-           '" download="opsradio.apk">' + iconSVG('i-download') +
-           'Download APK</a>';
+    return '<div class="cta-store">' +
+      '<a class="btn btn-primary btn-download" href="' + APK_HREF +
+      '" download="opsradio.apk">' + iconSVG('i-download') +
+      'Download APK</a>' +
+      '<p class="cta-cap">Android 7+ · 20.6 MB</p>' +
+    '</div>';
   }
 
   function amazonButton() {
-    return '<a class="btn btn-amazon btn-download" href="' + AMAZON_HREF +
-           '" target="_blank" rel="noopener">' + iconSVG('i-amazon') +
-           'Get it on Amazon Appstore</a>';
+    return '<div class="cta-store">' +
+      '<a class="btn btn-amazon btn-download" href="' + AMAZON_HREF +
+      '" target="_blank" rel="noopener">' + iconSVG('i-amazon') +
+      'Get it on Amazon Appstore</a>' +
+      '<p class="cta-cap">Android &amp; Fire tablets</p>' +
+    '</div>';
   }
 
   function microsoftButton() {
