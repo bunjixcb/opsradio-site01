@@ -5,7 +5,7 @@
   var AMAZON_HREF = 'https://www.amazon.co.uk/dp/B0H2C1WWG3';
   var MS_HREF = 'https://apps.microsoft.com/detail/9p791g2vfx64';
   var APK_VERSION = 'v1.0';
-  var APK_SIZE = '20.6 MB';
+  var APK_SIZE = '20.7 MB';
 
   var ua = navigator.userAgent || '';
   var isAndroid = /android/i.test(ua);
@@ -26,7 +26,7 @@
       '<a class="btn btn-primary btn-download" href="' + APK_HREF +
       '" download="opsradio.apk">' + iconSVG('i-download') +
       'Download APK</a>' +
-      '<p class="cta-cap">Android 7+ · 20.6 MB</p>' +
+      '<p class="cta-cap">Android 7+ · 20.7 MB</p>' +
     '</div>';
   }
 
