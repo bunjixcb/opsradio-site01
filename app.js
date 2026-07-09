@@ -4,7 +4,7 @@
   var APK_HREF = '/opsradio.apk';
   var AMAZON_HREF = 'https://www.amazon.co.uk/dp/B0H2C1WWG3';
   var MS_HREF = 'https://apps.microsoft.com/detail/9p791g2vfx64';
-  var APK_VERSION = 'v1.0.16';
+  var APK_VERSION = 'v1.0.17';
   var APK_SIZE = '6.8 MB';
 
   var ua = navigator.userAgent || '';
