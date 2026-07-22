@@ -638,6 +638,35 @@ main {
 }
 
 /* ============================================================
+   ZONE 3.5 — Release news
+   ============================================================ */
+
+.news {
+  margin: 96px 0;
+}
+
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.news-entry p.news-date {
+  margin: 0 0 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ops-blue);
+}
+
+@media (max-width: 720px) {
+  .news { margin: 64px 0; }
+}
+
+/* ============================================================
    ZONE 5 — Troubleshooting (native <details> accordion)
    ============================================================ */
 
